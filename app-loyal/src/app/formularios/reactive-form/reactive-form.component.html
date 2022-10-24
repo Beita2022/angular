@@ -1,0 +1,43 @@
+<!-- formularios template driven -->
+<div class="row">
+  <div class="col-6">
+<form [formGroup]="loginForm">
+  <div class="form-group">
+  <label>Username</label>
+  <input
+     formControlName="username"
+     required=""
+     [ngClass]="{'is-invalid' : loginForm.get('username')?.invalid}"
+    >
+  <button type="submit" [disabled]="loginForm.invalid">
+    Enviar
+  </button>
+  <input type="reset" value="Reset">
+</div>
+</form>
+</div>
+<div class="col-6">
+  <h3>
+    Informadoin del formulario
+  </h3>
+  <ul>
+    <li>
+      value: {{loginForm.value | json}}
+    </li>
+    <li>
+      value: {{loginForm.valid}}
+    </li>
+
+    <li>
+      pristine: {{loginForm.pristine}} <!--  primer tecla -->
+    </li>
+    <li>
+      untouch: {{loginForm.touched}} <!--  primer tecla -->
+    </li>
+    <li>
+      email: {{loginForm.errors | json}} <!--  primer tecla -->
+    </li>
+  </ul>
+</div>
+</div>
+
