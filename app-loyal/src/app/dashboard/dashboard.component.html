@@ -25,44 +25,35 @@
                           class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
               </div>
 
-               <!-- Fomularios-->
-               <!-- Content Row -->
-               <div class="row">
-                <div class="col-12">
+              <!--formularios
+              <div class="row">
+                <div class="col-6">
                   <app-template-driven></app-template-driven>
                 </div>
-
-              </div>
-
-                <!-- Content Row -->
-                <div class="row">
-                  <div class="col-12">
-                    <app-reactive-form></app-reactive-form>
-                  </div>
-
+                <div class="col-6">
+                  <app-reactive-form></app-reactive-form>
                 </div>
-
+              </div>
+              -->
               <!-- Content Row -->
               <div class="row">
                 <div class="col-sm-12 col-lg-6">
-                  <app-saldo></app-saldo>
+                  <app-saldo [saldo]="informacion?.saldos"></app-saldo>
                 </div>
                 <div class="col-sm-12 col-lg-6">
-                  <app-datos-equipo></app-datos-equipo>
+                  <app-datos-equipo [equipo]="informacion?.equipo"></app-datos-equipo>
                 </div>
               </div>
+
               <!-- Content Row -->
               <div class="row">
                 <div class="col-sm-12 col-lg-8">
-                  <app-contacto-cliente></app-contacto-cliente>
+                  <app-contacto-cliente [cliente]="informacion?.cliente"></app-contacto-cliente>
                 </div>
                 <div class="col-sm-12 col-lg-4">
                   <app-recomendaciones></app-recomendaciones>
                 </div>
               </div>
-
-
-
           </div>
           <!-- /.container-fluid -->
 

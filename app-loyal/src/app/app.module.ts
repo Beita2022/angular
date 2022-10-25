@@ -27,6 +27,7 @@ import {MatChipsModule} from '@angular/material/chips';
 import { BasicFormComponent } from './formularios/basic-form/basic-form.component';
 import { NestedFormComponent } from './formularios/nested-form/nested-form.component';
 import { ArrayFormComponent } from './formularios/array-form/array-form.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { ArrayFormComponent } from './formularios/array-form/array-form.componen
     MatButtonModule,
     MatCheckboxModule,
     MatChipsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
