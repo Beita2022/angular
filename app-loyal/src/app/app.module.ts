@@ -17,6 +17,17 @@ import { RecomendacionesComponent } from './components/recomendaciones/recomenda
 import { TemplateDrivenComponent } from './formularios/template-driven/template-driven.component';
 import { ReactiveFormComponent } from './formularios/reactive-form/reactive-form.component';
 
+/*material */
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatChipsModule} from '@angular/material/chips';
+import { BasicFormComponent } from './formularios/basic-form/basic-form.component';
+import { NestedFormComponent } from './formularios/nested-form/nested-form.component';
+import { ArrayFormComponent } from './formularios/array-form/array-form.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,13 +42,23 @@ import { ReactiveFormComponent } from './formularios/reactive-form/reactive-form
     ContactoClienteComponent,
     RecomendacionesComponent,
     TemplateDrivenComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    BasicFormComponent,
+    NestedFormComponent,
+    ArrayFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    /*meterial*/
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatChipsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
